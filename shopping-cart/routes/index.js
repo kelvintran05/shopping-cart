@@ -1,10 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var Product = require('../models/product');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('shop/index', { title: 'Shopping cart' });
+router.get('/', function (req, res, next) {
+  var productChunks = [];
+  var chunkSize = 3;
+  Product.find(function (err, docs) {
+    console.log(docs);
+    for (var i = 0; i < docs.length; i += chunkSize) {
+      productChunks.push(docs.slice(i, i + chunkSize));
+    }
+    //res.render('shop/index', { title: 'Shopping cart', products: 'productChunks' });
+  });
+  console.log("Products: " + productChunks);
+  res.render('shop/index', { title: 'Shopping cart', products: productChunks });
 });
 
 module.exports = router;
-     
