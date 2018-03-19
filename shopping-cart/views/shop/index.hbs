@@ -1,4 +1,4 @@
-{{# each products }}
+{{#each products }}
 <div class="row">
     {{#each this}}
     <div class="col-sm-6 col-md-4">
@@ -6,11 +6,11 @@
             <img src="{{this.imagePath}}" alt="..."
                 class="img-responsive">
             <div class="caption">
-                <h4>New Balance 247</h4>
-                <p class="description">Your round-the-clock lifestyle calls for a shoe that optimizes both style and performance for superior versatility.</p>
+                <h4>{{this.title}}</h4>
+                <p class="description">{{this.description}}</p>
                 <div>
-                    <div class="price pull-left">$89</div>
-                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                    <div class="price pull-left">${{this.price}}</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Add to Shopping Cart</a>
                 </div>
             </div>
         </div>
@@ -18,47 +18,3 @@
     {{/each}}
 </div>
 {{/each}}
-<div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnARxDvzduNeeOzc3uAPSgfNqUfph6QrwQ0drBuqblKE1NlPmgAQ" alt="..."
-                class="img-responsive">
-            <div class="caption">
-                <h4>New Balance 247</h4>
-                <p class="description">Your round-the-clock lifestyle calls for a shoe that optimizes both style and performance for superior versatility.</p>
-                <div>
-                    <div class="price pull-left">$89</div>
-                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnARxDvzduNeeOzc3uAPSgfNqUfph6QrwQ0drBuqblKE1NlPmgAQ" alt="..."
-                class="img-responsive">
-            <div class="caption">
-                <h4>New Balance 247</h4>
-                <p class="description">Your round-the-clock lifestyle calls for a shoe that optimizes both style and performance for superior versatility.</p>
-                <div>
-                    <div class="price pull-left">$89</div>
-                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnARxDvzduNeeOzc3uAPSgfNqUfph6QrwQ0drBuqblKE1NlPmgAQ" alt="..."
-                class="img-responsive">
-            <div class="caption">
-                <h4>New Balance 247</h4>
-                <p class="description">Your round-the-clock lifestyle calls for a shoe that optimizes both style and performance for superior versatility.</p>
-                <div>
-                    <div class="price pull-left">$89</div>
-                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

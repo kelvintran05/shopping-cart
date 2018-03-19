@@ -28,7 +28,7 @@ product_seeder = function () {
         products[i].save(function (err, result) {    
             done++;
             if (done === products.length) {
-                exit();
+                //exit();
             }
         });
     }
